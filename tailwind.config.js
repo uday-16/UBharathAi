@@ -7,7 +7,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Outfit', 'sans-serif'],
+                sans: ['Outfit', 'Inter', 'sans-serif'],
+                display: ['Tiro Devanagari Hindi', 'Outfit', 'serif'],
             },
             colors: {
                 brand: {
@@ -22,7 +23,35 @@ export default {
                     800: '#075985',
                     900: '#0c4a6e',
                 },
+                india: {
+                    saffron: '#FF9933',
+                    saffron_light: '#FFB84D',
+                    white: '#FFFFFF',
+                    green: '#138808',
+                    green_light: '#3EA834',
+                    blue: '#000080',
+                    blue_light: '#1A1A99',
+                },
+                surface: {
+                    50: '#F9FAFB',
+                    100: '#F3F4F6',
+                    200: '#E5E7EB',
+                }
             },
+            animation: {
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'float': 'float 6s ease-in-out infinite',
+                'shine': 'shine 1.5s ease-in-out infinite',
+            },
+            keyframes: {
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                },
+                shine: {
+                    '100%': { left: '125%' },
+                }
+            }
         },
     },
     plugins: [],
